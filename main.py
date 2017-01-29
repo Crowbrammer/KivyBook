@@ -1,6 +1,12 @@
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.textinput import TextInput
+from kivy.properties import ObjectProperty
+
+class AddLocationForm(BoxLayout):
+	search_input = ObjectProperty()
+	def search_location(self):
+		print('The user searched for: {}'.format(self.search_input.text))
 
 class WeatherApp(App):
 	pass
